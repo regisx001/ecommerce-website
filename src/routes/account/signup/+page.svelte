@@ -1,35 +1,52 @@
 <main class="main">
 	<!--=============== BREADCRUMB ===============-->
-	<section class="breadcrumb">
+	<!-- <section class="breadcrumb">
 		<ul class="breadcrumb__list container flex">
 			<li><a href="index.html" class="breadcrumb__link">Home</a></li>
-			<li><span class="breadcrumb__link">></span></li>
+			<li><span class="breadcrumb__link"></span></li>
 			<li><span class="breadcrumb__link">Login / Register</span></li>
 		</ul>
-	</section>
+	</section> -->
 
 	<!--=============== LOGIN-REGISTER ===============-->
 	<section class="login-register section--lg">
-		<div class="login-register__container container grid">
-			<div class="login">
-				<h3 class="section__title">Login</h3>
-				<form class="form grid">
-					<input type="email" placeholder="Your Email" class="form__input" />
-					<input type="password" placeholder="Your Password" class="form__input" />
-					<div class="form__btn">
-						<button class="btn">Login</button>
-					</div>
-				</form>
-			</div>
-			<div class="register">
+		<div class="container">
+			<div class="rounded-2xl border border-gray-300 p-10 lg:mx-[10%]">
 				<h3 class="section__title">Create an Account</h3>
 				<form class="form grid">
 					<input type="text" placeholder="Username" class="form__input" />
 					<input type="email" placeholder="Your Email" class="form__input" />
 					<input type="password" placeholder="Your Password" class="form__input" />
 					<input type="password" placeholder="Confirm Password" class="form__input" />
-					<div class="form__btn">
-						<button class="btn">Submit & Register</button>
+					<div class="flex">
+						<button class="btn w-full">Submit & Register</button>
+					</div>
+					<div class="flex w-full items-center justify-center">
+						<hr class="w-full" />
+						or
+						<hr class="w-full" />
+					</div>
+
+					<div class="flex">
+						<!-- svelte-ignore a11y_consider_explicit_label -->
+						<button class="btn github flex w-full items-center justify-center">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"
+								><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+									d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+								/></svg
+							>
+							Github
+						</button>
 					</div>
 				</form>
 			</div>
@@ -37,17 +54,15 @@
 	</section>
 
 	<!--=============== NEWSLETTER ===============-->
-	<section class="newsletter section">
-		<div class="newsletter__container container grid">
-			<h3 class="newsletter__title flex">
-				<img src="./assets/img/icon-email.svg" alt="" class="newsletter__icon" />
-				Sign in to Newsletter
-			</h3>
-			<p class="newsletter__description">...and receive $25 coupon for first shopping.</p>
-			<form action="" class="newsletter__form">
-				<input type="text" placeholder="Enter Your Email" class="newsletter__input" />
-				<button type="submit" class="newsletter__btn">Subscribe</button>
-			</form>
-		</div>
-	</section>
 </main>
+
+<style>
+	.github {
+		background-color: black;
+		border: 2px solid black;
+	}
+	.github:hover {
+		color: black;
+		background-color: transparent;
+	}
+</style>

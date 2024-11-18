@@ -2,7 +2,7 @@
 </script>
 
 <header class="header">
-	<div class="header__top">
+	<!-- <div class="header__top">
 		<div class="header__container container">
 			<div class="header__contact">
 				<span>(+01) - 2345 - 6789</span>
@@ -11,7 +11,7 @@
 			<p class="header__alert-news">Super Values Deals - Save more coupons</p>
 			<a href="login-register.html" class="header__top-action"> Log In / Sign Up </a>
 		</div>
-	</div>
+	</div> -->
 
 	<nav class="nav container">
 		<a href="index.html" class="nav__logo">
