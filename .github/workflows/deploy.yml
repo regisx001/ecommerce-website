@@ -23,6 +23,7 @@ jobs:
       - name: build
         env:
           BASE_PATH: '/picosvelte'
+          PUBLIC_PB_URL: ${{ vars.PUBLIC_PB_URL }}
 
         run: |
           pnpm run build

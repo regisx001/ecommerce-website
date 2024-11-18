@@ -1,3 +1,7 @@
+<script>
+	import { pb } from '$lib';
+</script>
+
 <main class="main">
 	<!--=============== BREADCRUMB ===============-->
 	<!-- <section class="breadcrumb">
@@ -27,7 +31,12 @@
 
 					<div class="flex">
 						<!-- svelte-ignore a11y_consider_explicit_label -->
-						<button class="btn github flex w-full items-center justify-center">
+						<button
+							onclick={async () => {
+								await pb.collection('users').authWithOAuth2({ provider: 'github' });
+							}}
+							class="btn github flex w-full items-center justify-center"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
