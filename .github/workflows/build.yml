@@ -2,6 +2,7 @@ name: Test build for production
 
 
 on:
+  workflow_dispatch:
   push:
     branch: "master"
 
@@ -26,5 +27,8 @@ jobs:
       
       - name: build
 
+        env:
+          PUBLIC_PB_URL: ${{ vars.PUBLIC_PB_URL }}
+        
         run: |
           pnpm run build
