@@ -1,4 +1,4 @@
-name: RUN tests
+name: Runing tests
 
 
 on:
@@ -25,7 +25,7 @@ jobs:
         env:
           PUBLIC_PB_URL: ${{ vars.PUBLIC_PB_URL }}
       
-      - name: Testing 
+      - name: Testing
 
         env:
           PUBLIC_PB_URL: ${{ vars.PUBLIC_PB_URL }}
