@@ -1,3 +1,10 @@
+# Ecommerce Website
+
+<img src="img/home.png"/>
+
+This is a project I work on it in my free time .
+I use sveltekit and pocketbase as stack.
+
 ## sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
