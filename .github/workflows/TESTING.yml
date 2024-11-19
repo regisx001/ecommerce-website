@@ -3,8 +3,6 @@ name: RUN tests
 
 on:
   workflow_dispatch:
-  push:
-    branch: "master"
 
 jobs:
   build_site:
