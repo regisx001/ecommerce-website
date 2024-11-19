@@ -1,4 +1,4 @@
-name: RUN tests
+name: Test build for production
 
 
 on:
@@ -25,10 +25,10 @@ jobs:
         env:
           PUBLIC_PB_URL: ${{ vars.PUBLIC_PB_URL }}
       
-      - name: Testing 
+      - name: build
 
         env:
           PUBLIC_PB_URL: ${{ vars.PUBLIC_PB_URL }}
         
         run: |
-          pnpm run test
+          pnpm run build
