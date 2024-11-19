@@ -20,6 +20,10 @@ jobs:
       - name: Install dependencies
         run: |
           pnpm install
+
+        env:
+          PUBLIC_PB_URL: ${{ vars.PUBLIC_PB_URL }}
+      
       - name: build
 
         run: |
