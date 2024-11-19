@@ -19,6 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           pnpm install
+          pnpm exec playwright install 
 
         env:
           PUBLIC_PB_URL: ${{ vars.PUBLIC_PB_URL }}
