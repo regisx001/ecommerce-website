@@ -20,3 +20,11 @@ export { default as Showcase } from "./Components/INDEX/Showcase/showcase.svelte
 export { default as Newsletter } from "./Components/INDEX/Newsletter/newsletter.svelte"
 
 export { default as AuthenticationForm } from "./Components/Account/authenticationForm.svelte"
+
+
+
+
+
+
+// Icons Exports
+export { default as GithubIcon } from "./Icons/github.svelte"
