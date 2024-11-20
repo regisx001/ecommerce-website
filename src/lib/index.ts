@@ -18,3 +18,5 @@ export { default as Deals } from "./Components/INDEX/Deals/deals.svelte"
 export { default as Arrivals } from "./Components/INDEX/Arrivals/arrivals.svelte"
 export { default as Showcase } from "./Components/INDEX/Showcase/showcase.svelte"
 export { default as Newsletter } from "./Components/INDEX/Newsletter/newsletter.svelte"
+
+export { default as AuthenticationForm } from "./Components/Account/authenticationForm.svelte"
