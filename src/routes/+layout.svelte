@@ -5,8 +5,8 @@
 	import { Header, Footer } from '$lib';
 </script>
 
-<!-- <Header route={String($page.route.id)} /> -->
+<Header route={String($page.route.id)} />
 
-<!-- {@render children()} -->
+{@render children()}
 
 <Footer />
