@@ -1,10 +1,11 @@
 <script lang="ts">
 	import '../app.css';
 	let { children } = $props();
+	import { page } from '$app/stores';
 	import { Header, Footer } from '$lib';
 </script>
 
-<Header />
+<Header route={String($page.route.id)} />
 {@render children()}
 
 <Footer />

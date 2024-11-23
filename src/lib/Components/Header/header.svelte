@@ -1,67 +1,94 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
+	let { route }: { route: string } = $props();
+
+	let navData = [
+		{ name: 'Home', url: '/' },
+		{ name: 'Shop', url: '/shop' },
+		{ name: 'My Account', url: '/account' },
+		{ name: 'Compare', url: '/compare' },
+		{ name: 'Login', url: '/account/login' }
+	];
 </script>
 
 <header class="header">
-	<!-- <div class="header__top">
+	<nav class="nav container">
+		<a href="{base}/" class="nav__logo">
+			<img class="nav__logo-img" src="assets/img/logo.svg" alt="website logo" />
+		</a>
+
+		<div class="nav__menu" id="nav-menu">
+			{@render navBar(navData)}
+
+			{@render searchBar()}
+		</div>
+
+		{@render navActions()}
+	</nav>
+</header>
+
+<!--  Nav Bar Componnent Started -->
+{#snippet navBar(navData: any)}
+	<div class="nav__menu-top">
+		<a href="{base}/" class="nav__menu-logo">
+			<img src="assets/img/logo.svg" alt="" />
+		</a>
+		<div class="nav__close" id="nav-close">
+			<i class="fi fi-rs-cross-small"></i>
+		</div>
+	</div>
+
+	<ul class="nav__list">
+		{#each navData as navUrl}
+			<li class="nav__item">
+				<a href={navUrl.url} class:active-link={route === navUrl.url} class="nav__link">
+					{navUrl.name}
+				</a>
+			</li>
+		{/each}
+	</ul>
+{/snippet}
+<!--  Nav Bar Componnent Ended -->
+
+<!-- Search Bar Componnent Started -->
+{#snippet searchBar()}
+	<div class="header__search">
+		<input type="text" placeholder="Search For Items..." class="form__input" />
+		<button class="search__btn">
+			<img src="assets/img/search.png" alt="search icon" />
+		</button>
+	</div>
+{/snippet}
+<!-- Search Bar Componnent Ended -->
+
+<!-- Top Banner Componnent Started -->
+{#snippet topBanner()}
+	<div class="header__top">
 		<div class="header__container container">
 			<div class="header__contact">
 				<span>(+01) - 2345 - 6789</span>
 				<span>Our location</span>
 			</div>
 			<p class="header__alert-news">Super Values Deals - Save more coupons</p>
-			<a href="login-register.html" class="header__top-action"> Log In / Sign Up </a>
+			<a href="{base}/login" class="header__top-action"> Log In / Sign Up </a>
 		</div>
-	</div> -->
+	</div>
+{/snippet}
+<!-- Top Banner Componnent Ended -->
 
-	<nav class="nav container">
-		<a href="index.html" class="nav__logo">
-			<img class="nav__logo-img" src="assets/img/logo.svg" alt="website logo" />
+{#snippet navActions()}
+	<div class="header__user-actions">
+		<a href="/wishlist" class="header__action-btn" title="Wishlist">
+			<img src="/assets/img/icon-heart.svg" alt="" />
+			<span class="count">3</span>
 		</a>
-		<div class="nav__menu" id="nav-menu">
-			<div class="nav__menu-top">
-				<a href="index.html" class="nav__menu-logo">
-					<img src="assets/img/logo.svg" alt="" />
-				</a>
-				<div class="nav__close" id="nav-close">
-					<i class="fi fi-rs-cross-small"></i>
-				</div>
-			</div>
-			<ul class="nav__list">
-				<li class="nav__item">
-					<a href="index.html" class="nav__link active-link">Home</a>
-				</li>
-				<li class="nav__item">
-					<a href="shop.html" class="nav__link">Shop</a>
-				</li>
-				<li class="nav__item">
-					<a href="accounts.html" class="nav__link">My Account</a>
-				</li>
-				<li class="nav__item">
-					<a href="compare.html" class="nav__link">Compare</a>
-				</li>
-				<li class="nav__item">
-					<a href="login-register.html" class="nav__link">Login</a>
-				</li>
-			</ul>
-			<div class="header__search">
-				<input type="text" placeholder="Search For Items..." class="form__input" />
-				<button class="search__btn">
-					<img src="assets/img/search.png" alt="search icon" />
-				</button>
-			</div>
+		<a href="/cart" class="header__action-btn" title="Cart">
+			<img src="/assets/img/icon-cart.svg" alt="" />
+			<span class="count">3</span>
+		</a>
+		<div class="header__action-btn nav__toggle" id="nav-toggle">
+			<img src="/assets/img/menu-burger.svg" alt="" />
 		</div>
-		<div class="header__user-actions">
-			<a href="wishlist.html" class="header__action-btn" title="Wishlist">
-				<img src="assets/img/icon-heart.svg" alt="" />
-				<span class="count">3</span>
-			</a>
-			<a href="cart.html" class="header__action-btn" title="Cart">
-				<img src="assets/img/icon-cart.svg" alt="" />
-				<span class="count">3</span>
-			</a>
-			<div class="header__action-btn nav__toggle" id="nav-toggle">
-				<img src="assets/img/menu-burger.svg" alt="" />
-			</div>
-		</div>
-	</nav>
-</header>
+	</div>
+{/snippet}
