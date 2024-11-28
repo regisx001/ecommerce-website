@@ -5,19 +5,30 @@
 	<meta charset="utf-8" />
 	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet"
-		href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
 
-	<!--=============== SWIPER CSS ===============-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="%sveltekit.assets%/css/vendor.css">
+
+	<link rel="stylesheet" href="%sveltekit.assets%/css/utility.css">
+
+	<link rel="stylesheet" href="%sveltekit.assets%/css/app.css">
+
+
 	%sveltekit.head%
 </head>
 
 <body data-sveltekit-preload-data="hover">
 	<div style="display: contents">%sveltekit.body%</div>
+
+
+	<!--====== Vendor Js ======-->
+	<script src="%sveltekit.assets%/js/vendor.js"></script>
+
+	<!--====== jQuery Shopnav plugin ======-->
+	<script src="%sveltekit.assets%/js/jquery.shopnav.js"></script>
+
+	<!--====== App ======-->
+	<script src="%sveltekit.assets%/js/app.js"></script>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="main.js"></script>
 
 </html>
