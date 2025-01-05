@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 
-	import { Header } from '$lib';
+	import { Header, Footer } from '$lib';
 	let { children } = $props();
 
 	import { page } from '$app/stores';
@@ -10,3 +10,5 @@
 <Header />
 
 {@render children()}
+
+<Footer />
