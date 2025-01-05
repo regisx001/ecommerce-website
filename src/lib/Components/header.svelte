@@ -23,13 +23,21 @@
 						placeholder="Search"
 					/>
 
-					<button class="btn btn--icon fas fa-search main-search-button" type="submit"></button>
+					<button
+						class="btn btn--icon fas fa-search main-search-button"
+						type="submit"
+						aria-label="Search"
+					></button>
 				</form>
 				<!--====== End - Search Form ======-->
 
 				<!--====== Dropdown Main plugin ======-->
 				<div class="menu-init" id="navigation">
-					<button class="btn btn--icon toggle-button fas fa-cogs" type="button"></button>
+					<button
+						class="btn btn--icon toggle-button fas fa-cogs"
+						type="button"
+						aria-label="Settings"
+					></button>
 
 					<!--====== Menu ======-->
 					<div class="ah-lg-mode">
@@ -38,7 +46,7 @@
 						<!--====== List ======-->
 						<ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
 							<li class="has-dropdown" data-tooltip="tooltip" data-placement="left" title="Account">
-								<a><i class="far fa-user-circle"></i></a>
+								<a href="#a" aria-label="Account"><i class="far fa-user-circle"></i></a>
 
 								<!--====== Dropdown ======-->
 
@@ -81,49 +89,55 @@
 								data-placement="left"
 								title="Settings"
 							>
-								<a><i class="fas fa-user-cog"></i></a>
+								<a href="#a" aria-label="Settings"><i class="fas fa-user-cog"></i></a>
 
 								<!--====== Dropdown ======-->
 
 								<span class="js-menu-toggle"></span>
 								<ul style="width:120px">
 									<li class="has-dropdown has-dropdown--ul-right-100">
-										<a>Language<i class="fas fa-angle-down u-s-m-l-6"></i></a>
+										<a href="#a" aria-label="Language"
+											>Language<i class="fas fa-angle-down u-s-m-l-6"></i></a
+										>
 
 										<!--====== Dropdown ======-->
 
 										<span class="js-menu-toggle"></span>
 										<ul style="width:120px">
 											<li>
-												<a class="u-c-brand">ENGLISH</a>
+												<a href="#a" class="u-c-brand" aria-label="English">ENGLISH</a>
 											</li>
 											<li>
-												<a>ARABIC</a>
+												<a href="#a" aria-label="Arabic">ARABIC</a>
 											</li>
 											<li>
-												<a>FRANCAIS</a>
+												<a href="#a" aria-label="Francais">FRANCAIS</a>
 											</li>
 											<li>
-												<a>ESPANOL</a>
+												<a href="#a" aria-label="Espanol">ESPANOL</a>
 											</li>
 										</ul>
 										<!--====== End - Dropdown ======-->
 									</li>
 									<li class="has-dropdown has-dropdown--ul-right-100">
-										<a>Currency<i class="fas fa-angle-down u-s-m-l-6"></i></a>
+										<a href="#a" aria-label="Currency"
+											>Currency<i class="fas fa-angle-down u-s-m-l-6"></i></a
+										>
 
 										<!--====== Dropdown ======-->
 
 										<span class="js-menu-toggle"></span>
 										<ul style="width:225px">
 											<li>
-												<a class="u-c-brand">$ - US DOLLAR</a>
+												<a href="#a" class="u-c-brand" aria-label="US Dollar">$ - US DOLLAR</a>
 											</li>
 											<li>
-												<a>£ - BRITISH POUND STERLING</a>
+												<a href="#a" aria-label="British Pound Sterling"
+													>£ - BRITISH POUND STERLING</a
+												>
 											</li>
 											<li>
-												<a>€ - EURO</a>
+												<a href="#a" aria-label="Euro">€ - EURO</a>
 											</li>
 										</ul>
 										<!--====== End - Dropdown ======-->
@@ -132,10 +146,14 @@
 								<!--====== End - Dropdown ======-->
 							</li>
 							<li data-tooltip="tooltip" data-placement="left" title="Contact">
-								<a href="tel:+0900901904"><i class="fas fa-phone-volume"></i></a>
+								<a href="tel:+0900901904" aria-label="Contact"
+									><i class="fas fa-phone-volume"></i></a
+								>
 							</li>
 							<li data-tooltip="tooltip" data-placement="left" title="Mail">
-								<a href="mailto:contact@domain.com"><i class="far fa-envelope"></i></a>
+								<a href="mailto:contact@domain.com" aria-label="Mail"
+									><i class="far fa-envelope"></i></a
+								>
 							</li>
 						</ul>
 						<!--====== End - List ======-->
