@@ -9,6 +9,8 @@
 
 <Header />
 
-{@render children()}
+<div class="app-content">
+	{@render children()}
+</div>
 
 <Footer />
